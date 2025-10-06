@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AniBot Info</title>
+  <style>
+    /* --- Space background --- */
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000 100%);
+      overflow-x: hidden;
+    }
+
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: transparent url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/img/stars.png') repeat;
+      animation: moveStars 200s linear infinite;
+      z-index: 0;
+    }
+    @keyframes moveStars {
+      from { background-position: 0 0; }
+      to { background-position: 10000px 10000px; }
+    }
+
+    /* --- Content box --- */
+    .overlay {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(6px);
+      border-radius: 20px;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 40px 25px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.6em;
+      color: #8ae9ff;
+      margin-bottom: 0.3em;
+    }
+    h2 {
+      color: #b3e0ff;
+      margin-top: 1.6em;
+      border-left: 4px solid #8ae9ff;
+      padding-left: 10px;
+    }
+    ul {
+      list-style-type: '✨ ';
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      opacity: 0.85;
+    }
+    footer a {
+      color: #8ae9ff;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="overlay">
+    <h1> AniBot</h1>
+    <p style="text-align:center;">Your anime companion on Discord</p>
+
+    <section>
+      <h2>✨ What AniBot Does</h2>
+      <p>
+        AniBot keeps your Discord server updated with the latest anime episodes,
+        and helps you find anime info fast — from characters to series details.
+      </p>
+    </section>
+
+    <section>
+      <h2>📜 Commands</h2>
+      <ul>
+        <li><strong>/autosend</strong> — Enable auto-send of new anime releases in this channel.</li>
+        <li><strong>/removeautosend</strong> — Disable auto-send in this channel.</li>
+        <li><strong>/findanimecharacter &lt;name&gt;</strong> — Find anime character info.</li>
+        <li><strong>/findani &lt;title&gt;</strong> — Get details about an anime by title.</li>
+        <li><strong>/removerole &lt;user&gt;</strong> — Remove the ping role from a user.</li>
+      </ul>
+      <p><em>Note:</em> The <strong>/giveping</strong> command is admin-only and excluded from public info.</p>
+    </section>
+
+    <section>
+      <h2>💡 How It Works</h2>
+      <p>
+        Every few minutes, AniBot automatically checks anime sites for new releases.
+        When it finds a fresh episode, it posts it right into your Discord channel with title, synopsis, and rating.
+      </p>
+      <p>
+        You can use the <strong>/findanimecharacter</strong> or <strong>/findani</strong> commands to search for characters or shows directly.
+      </p>
+    </section>
+
+    <footer>
+      <p>Made with 💫 rentakashi.dev — Powered by Discord.js &amp; HiAnime</p>
+      <p>
+        <a href="https://rentakashi.github.io/Ani/" target="_blank">Terms of Service</a> |
+        <a href="https://rentakashi.github.io/Ani-polity-/" target="_blank">Privacy Policy</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
